@@ -4,11 +4,13 @@ namespace Example
     {
         
         private IUserArmor armor;
+        private readonly IMessenger messenger;
         private readonly ISomethingElse somethingElse;
 
-        public Player(IUserArmor armor, ISomething something, ISomethingElse somethingElse)
+        public Player(IUserArmor armor, IMessenger messenger, ISomethingElse somethingElse)
         {
             this.armor = armor;
+            this.messenger = messenger;
             this.somethingElse = somethingElse;
             this.HitPoints = 100;
             this.Alive = true;
@@ -21,6 +23,8 @@ namespace Example
 
         public void Damage(DamageType type, int hitPoints)
         {
+            messenger.Message("Damange was done");
+            HitPoints = HitPoints - armor.CalculateDamage(type, hitPoints);
             Rage++;
         }
     }

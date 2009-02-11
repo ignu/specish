@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2D5963D2-DB83-4678-A74E-0DACAA02962A}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq, Version=2.6.1014.1, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.4.1.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThirdParty\nunit.framework.dll</HintPath>
@@ -50,10 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameEngine\Armor.cs" />
-    <Compile Include="GameEngine\Class1.cs" />
+    <Compile Include="GameEngine\IUserArmor.cs" />
     <Compile Include="GameEngine\DamageType.cs" />
-    <Compile Include="GameEngine\ISomething.cs" />
+    <Compile Include="GameEngine\IMessenger.cs" />
     <Compile Include="GameEngine\ISomethingElse.cs" />
+    <Compile Include="GameEngine\Player.cs" />
     <Compile Include="Player_when_initialized.cs" />
     <Compile Include="Player_when_taking_damage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,6 +11,10 @@ namespace Example
 
         protected override void establish_context()
         {
+            Mock<IUserArmor>()
+                .Expect(u => u.CalculateDamage(DamageType.Piercing, 50))
+                .Returns(returnedDamage);
+
             player = Create<Player>();
         }
 
