@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-
 namespace Example
 {
-    public interface IUserArmor
-    {
-        int CalculateDamage(DamageType type, int HitPoints);
-        IList<Armor> ArmorItems { get; set;}
-    }
-
     public class Player
     {
         
@@ -21,6 +12,7 @@ namespace Example
             this.somethingElse = somethingElse;
             this.HitPoints = 100;
             this.Alive = true;
+            this.Rage = 0;
         }
 
         public bool Alive { get; set; }
@@ -29,7 +21,7 @@ namespace Example
 
         public void Damage(DamageType type, int hitPoints)
         {
-            throw new NotImplementedException();
+            Rage++;
         }
     }
 }

@@ -24,11 +24,11 @@ namespace Example
         {
             player.HitPoints.ShouldEqual(100 - returnedDamage);
         }
-
+ 
         [Test]
         public void rage_is_increased_by_one()
         {
-            Assert.Ignore("Need To Test");
+            player.Rage.ShouldEqual(1);
         }
     }
 }
