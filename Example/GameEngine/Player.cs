@@ -23,7 +23,7 @@ namespace Example
 
         public void Damage(DamageType type, int hitPoints)
         {
-            messenger.Message("Damange was done");
+            messenger.Message("Damange was done.");
             HitPoints = HitPoints - armor.CalculateDamage(type, hitPoints);
             Rage++;
         }

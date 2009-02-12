@@ -10,7 +10,7 @@ namespace Example
         private int returnedDamage = 33;
 
         protected override void establish_context()
-        {
+        {                        
             Mock<IUserArmor>()
                 .Expect(u => u.CalculateDamage(DamageType.Piercing, 50))
                 .Returns(returnedDamage);
@@ -32,7 +32,15 @@ namespace Example
         [Test]
         public void rage_is_increased_by_one()
         {
-            player.Rage.ShouldEqual(1);
+            player.Rage.ShouldEqual(1);            
         }
+
+        [Test]
+        public void message_is_sent_to_user()
+        {
+            Mock<IMessenger>()
+                .Verify(e => e.Message("Damange was done."));
+        }
+        
     }
 }

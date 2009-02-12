@@ -42,8 +42,10 @@ namespace Specish
             if (this.VerifyAll)
                 this.factory.VerifyAll();
             else
-                this.factory.Verify();
+                this.factory.Verify();           
         }
+
+        
 
         /// <summary>
         /// Gets or sets a value indicating whether <see cref="MockFactory.VerifyAll"/> will be used or <see cref="MockFactory.Verify"/>.
