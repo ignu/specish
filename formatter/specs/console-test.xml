@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="Example.dll" total="5" failures="0" not-run="0" date="2009-02-13" time="00:44:52">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.3521" os-version="Microsoft Windows NT 6.1.7000.0" platform="Win32NT" cwd="c:\code\Specish\Example\bin\Debug" machine-name="NICE" user="ignu" user-domain="nice" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="Example.dll" success="True" time="0.939" asserts="0">
+    <results>
+      <test-suite name="Example" success="True" time="0.928" asserts="0">
+        <results>
+          <test-suite name="Player_when_initialized" success="True" time="0.707" asserts="0">
+            <results>
+              <test-case name="Example.Player_when_initialized.has_100_hitpoints" executed="True" success="True" time="0.025" asserts="1" />
+              <test-case name="Example.Player_when_initialized.is_alive" executed="True" success="True" time="0.002" asserts="1" />
+            </results>
+          </test-suite>
+          <test-suite name="Player_when_taking_damage" success="True" time="0.174" asserts="0">
+            <results>
+              <test-case name="Example.Player_when_taking_damage.damage_minus_armor_buffer_is_subtracted_from_hitpoints" executed="True" success="True" time="0.001" asserts="1" />
+              <test-case name="Example.Player_when_taking_damage.message_is_sent_to_user" executed="True" success="True" time="0.008" asserts="0" />
+              <test-case name="Example.Player_when_taking_damage.rage_is_increased_by_one" executed="True" success="True" time="0.000" asserts="1" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
